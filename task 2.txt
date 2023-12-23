@@ -1,0 +1,75 @@
+Install Flask:
+
+Before you begin, make sure you have Flask installed. You can install it using pip:
+
+Copy code
+pip install Flask
+Create a Python Flask Application:
+
+Here's a simple Flask application that serves an HTML page with CSS styles:
+
+python
+Copy code
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+Create HTML and CSS Files:
+
+Next, create two files in a folder called "templates" in your project directory:
+
+index.html: This is the HTML template for your web page.
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Web Development</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Python Web Development</h1>
+    <p>This is a basic example of combining Python, HTML, and CSS.</p>
+</body>
+</html>
+Create a folder called "static" in your project directory, and inside it, create a file named style.css:
+css
+Copy code
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+}
+
+p {
+    font-size: 18px;
+}
+Run Your Flask Application:
+
+Save your Python, HTML, and CSS files in the appropriate folders. Then, run your Flask application:
+
+python your_app_name.py
+Replace your_app_name.py with the name of your Python script.
+
+Access Your Web Application:
+
+Open a web browser and go to http://localhost:5000 (or the URL specified by Flask). You should see your web page with the specified HTML content and CSS styles.
+
+This is a basic example of how you can integrate Python, HTML, and CSS for web development using Flask. You can expand upon this foundation to create more complex web applications, add dynamic content, and interact with databases as needed for your projects.
+
+
+
+
+

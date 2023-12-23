@@ -1,0 +1,15 @@
+person = {
+    'name': 'John',
+    'age': 30,
+    'city': 'New York'
+}
+
+# Accessing dictionary values
+print(person['name'])
+
+# Adding a new key-value pair
+person['job'] = 'Engineer'
+
+# Iterating through keys and values
+for key, value in person.items():
+    print(f"{key}: {value}")
